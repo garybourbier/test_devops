@@ -26,14 +26,3 @@ pipeline {
 
   }
 }
-
-post
-{
-	success {
-			sh 'cat /tmp/users'
-			sh 'cat /tmp/groupes'
-			sh 'cat /tmp/group_prim'
-			}		
-
-
-}
