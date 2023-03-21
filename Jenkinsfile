@@ -5,13 +5,13 @@ pipeline {
       parallel {
         stage('Stage1') {
           steps {
-            sh 'sh \'cut -d: -f1,3 /etc/passwd > /tmp/users\''
+            sh 'cut -d: -f1,3 /etc/passwd > /tmp/users'
           }
         }
 
         stage('stage1-2') {
           steps {
-            sh 'sh \'cut -d: -f1,3 /etc/group > /tmp/groupes\''
+            sh 'cut -d: -f1,3 /etc/group > /tmp/groupes'
           }
         }
 
@@ -20,7 +20,7 @@ pipeline {
 
     stage('Stage2') {
       steps {
-        sh 'sh \'cut -d: -f4 /etc/passwd | sort|uniq > /tmp/group_prim\''
+        sh 'cut -d: -f4 /etc/passwd | sort|uniq > /tmp/group_prim'
       }
     }
 
